@@ -2,7 +2,7 @@
 
 ### Problem
 
-Did the 1980 Mariel Boatlift — a sudden influx of Cuban immigrants into Miami — reduce wages for low-skill workers?
+Did the 1980 Mariel Boatlift, a sudden influx of Cuban immigrants into Miami, reduce wages for low skill workers?
 
 ### Data
 
