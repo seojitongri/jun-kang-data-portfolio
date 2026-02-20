@@ -17,5 +17,5 @@ This portfolio highlights data analytics projects using SQL and Python, focused 
 SQL, Python (pandas), Excel, Tableau basics, statistics, data storytelling
 
 ## Contact
-LinkedIn: add your link here  
-Email: add your email here
+LinkedIn: https://www.linkedin.com/in/junkang2002/ 
+Email: skyjun111@berkeley.edu
