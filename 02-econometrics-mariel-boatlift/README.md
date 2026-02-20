@@ -32,5 +32,5 @@ Public dataset containing wage and employment outcomes across cities and time.
 
 ## Difference-in-Differences Visualization
 
-![DID Trend](figures.png)
+![DID Trend](figure.png)
 
