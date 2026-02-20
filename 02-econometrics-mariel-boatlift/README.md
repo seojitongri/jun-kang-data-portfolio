@@ -32,5 +32,5 @@ Public dataset containing wage and employment outcomes across cities and time.
 
 ## Difference-in-Differences Visualization
 
-![DID Trend](impact_of_the_mariel_boatlift_on_black_unemployment_rates .png)
+![DID Trend](figures.png)
 
