@@ -46,6 +46,9 @@ How does daily weather impact bike rental demand, and how can this inform operat
 ## Tools
 
 Python
+
 Pandas
+
 Matplotlib
+
 Reproducible research workflows
