@@ -93,4 +93,5 @@ Assuming 50 dollars in monthly revenue per subscriber, this shift could generate
 
 This highlights how channel optimization directly impacts long term profitability.
 
+![CAC vs retention](cac_vs_retention.png)
 
