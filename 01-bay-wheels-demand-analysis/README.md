@@ -52,3 +52,7 @@ Pandas
 Matplotlib
 
 Reproducible research workflows
+
+## Sample Visualization
+
+![Average Bike Rentals by Precipitation](Average_Bike_Rentals_by_Precipitation_Level.png)
