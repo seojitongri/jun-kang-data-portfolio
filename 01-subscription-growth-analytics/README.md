@@ -80,3 +80,18 @@ The analysis uses three core tables:
 * Business driven interpretation of metrics
 * Data visualization and executive communication
 
+---
+
+## Projected Revenue Impact
+
+If 100,000 dollars of marketing spend is reallocated from Meta to Organic:
+
+* Meta would acquire approximately 588 subscribers
+* Organic would acquire approximately 1,428 subscribers
+* Net gain: 840 additional subscribers
+
+Assuming an average monthly revenue of 50 dollars per subscriber, this shift could generate approximately 42,000 dollars in additional monthly recurring revenue, or over 500,000 dollars annually.
+
+This demonstrates that improving channel allocation can materially impact company growth and profitability.
+
+
