@@ -55,4 +55,4 @@ Reproducible research workflows
 
 ## Sample Visualization
 
-![Average Bike Rentals by Precipitation](Average_Bike_Rentals_by_Precipitation_Level.png)
+![Average Bike Rentals by Precipitation](bike_rentals_by_precipitation.png)
