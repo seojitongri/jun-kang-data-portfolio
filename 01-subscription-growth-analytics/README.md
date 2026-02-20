@@ -84,14 +84,13 @@ The analysis uses three core tables:
 
 ## Projected Revenue Impact
 
-If 100,000 dollars of marketing spend is reallocated from Meta to Organic:
+Reallocating 100,000 dollars from Meta (CAC ≈ 170) to Organic (CAC ≈ 70) would:
 
-* Meta would acquire approximately 588 subscribers
-* Organic would acquire approximately 1,428 subscribers
-* Net gain: 840 additional subscribers
+* Increase acquired subscribers from approximately 588 to 1,428
+* Generate an additional 840 subscribers
 
-Assuming an average monthly revenue of 50 dollars per subscriber, this shift could generate approximately 42,000 dollars in additional monthly recurring revenue, or over 500,000 dollars annually.
+Assuming 50 dollars in monthly revenue per subscriber, this shift could generate approximately 42,000 dollars in additional monthly recurring revenue, or over 500,000 dollars annually.
 
-This demonstrates that improving channel allocation can materially impact company growth and profitability.
+This highlights how channel optimization directly impacts long term profitability.
 
 
