@@ -14,7 +14,7 @@ Key findings include:
 Business implications:
 
 * There is clear opportunity to increase utilization through **targeted promotions and pricing strategies**
-* Current reservation data likely **underrepresents total demand**, particularly due to walk-in customers
+* Current reservation data **underrepresents total demand**, particularly due to walk-in customers
 * Different operational strategies are needed for each location
 
 ---
