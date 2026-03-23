@@ -1,3 +1,5 @@
+## Note: This project is actively being refined. Additional data pipelines, visualizations, and modularization are in progress.
+
 # Jaguar Karaoke Business Analytics
 
 ## Executive Summary
