@@ -1,174 +1,144 @@
-## Note: This project is actively being refined. Additional data pipelines, visualizations, and modularization are in progress.
-
 # Jaguar Karaoke Business Analytics
+
+**Jun Kang | UC Berkeley, Statistics & Economics**  
+*Independent Portfolio Project — March 2026*
+
+---
 
 ## Executive Summary
 
-This project analyzes reservation data from a two-location karaoke business (Berkeley and Oakland) to understand customer demand patterns, capacity utilization, and operational inefficiencies.
+This project analyzes reservation data from Jaguar Karaoke, a private-room karaoke business with two Bay Area locations (Berkeley and Oakland), to identify demand patterns, capacity inefficiencies, and actionable operational improvements.
 
-Key findings include:
-
-* Peak demand consistently occurs between **8 PM and 10 PM** across both locations
-* The **Oakland location exhibits stronger reservation-based demand**, reaching over 50% utilization during peak hours
-* The **Berkeley location appears significantly underutilized** based on reservation data alone
-* Early hours (before 7 PM) show **systematic underutilization across both locations**
-
-Business implications:
-
-* There is clear opportunity to increase utilization through **targeted promotions and pricing strategies**
-* Current reservation data **underrepresents total demand**, particularly due to walk-in customers
-* Different operational strategies are needed for each location
+**Key findings:**
+- Peak reservation demand occurs between **8PM–11PM**, with Oakland peaking earlier (7–9PM) and Berkeley later (9–11PM)
+- Oakland reaches **~52% room utilization** at peak hours based on reservation data alone
+- Berkeley shows low reservation-based utilization (~22% max), consistent with its **walk-in driven model**
+- Early evening slots (6–7PM) are **systematically underutilized** across both locations
+- Reservation data significantly **underestimates true demand** — walk-in customers represent the majority of actual traffic, especially in Berkeley
 
 ---
 
 ## Problem Statement
 
-The business currently lacks structured analytics to answer key operational questions:
-
-* When is customer demand highest?
-* Are rooms being utilized efficiently throughout the day?
-* How do demand patterns differ between locations?
-* Where are the biggest opportunities to increase revenue or improve customer experience?
-
-This project transforms raw reservation logs into actionable insights to support data-driven decision making.
+The business lacked structured analytics to answer key operational questions:
+- When is customer demand highest, and does it differ by location?
+- How efficiently are rooms being utilized throughout the day?
+- Where are the biggest opportunities to improve revenue or customer experience?
+- What improvements to data collection would unlock deeper analysis?
 
 ---
 
-## Data Description
+## Data
 
-The dataset consists of reservation-level records from Jaguar Karaoke, including:
+Raw reservation logs from March 2026 across two locations:
 
-* Reservation date and time
-* Duration of booking
-* Location (Berkeley or Oakland)
-* Room usage
+| Feature | Description |
+|---|---|
+| Date | Reservation date |
+| Check-in text | Unstructured field containing time, group size, contact info |
+| Room | Room number assigned |
+| Confirmed | Whether reservation was confirmed |
+| Location | Berkeley or Oakland |
 
-### Data Challenges
-
-* Raw data was **unstructured and required extensive cleaning**
-* **Walk-in customers are not captured**, leading to underestimation of true utilization
-* No direct revenue or item-level sales data available
+**Data challenges:**
+- All reservation details (time, group size, phone) stored as unstructured text in a single field — required custom parsing
+- Walk-in customers not captured, leading to underestimation of true utilization
+- No item-level F&B data or customer identifiers available
 
 ---
 
 ## Methodology
 
 ### 1. Data Cleaning
-
-* Parsed raw reservation logs into structured tabular format
-* Standardized time formats and extracted usable datetime features
+- Loaded and merged Berkeley and Oakland datasets with standardized schema
+- Forward-filled missing dates, removed rows without check-in times
+- Parsed unstructured text fields using regex to extract start time, end time, group size, and phone number
 
 ### 2. Feature Engineering
-
-* Reservation duration (hours)
-* Hourly occupancy
-* Location-based segmentation
-* **Utilization rate = occupied rooms / total capacity**
+- Converted raw times into a continuous business hour scale (6PM = 18, midnight = 24, 2AM = 26) to handle overnight sessions
+- Calculated session duration, hourly occupancy slots, and weekday
+- Computed utilization rate = booked hours / total capacity hours
 
 ### 3. Analysis
-
-* Aggregated reservation counts by hour and location
-* Constructed hourly utilization matrix
-* Visualized patterns using heatmaps
+- Reservation counts by hour and location
+- Room utilization rate by location
+- Average hourly utilization heatmap
+- Group size and session duration behavior analysis
 
 ---
 
 ## Key Results
 
-### Average Hourly Utilization (Reservation-Based)
+### Peak Hour Demand
+Demand is heavily concentrated between 8PM–11PM. Oakland shows stronger early evening demand while Berkeley peaks later, likely reflecting its student-driven customer base.
 
-* **Oakland peaks at ~50% utilization during 9 PM–10 PM**
-* **Berkeley remains below ~25% utilization across most hours**
-* Early hours (4 PM–7 PM) show **consistently low demand**
+### Capacity Utilization
+| Location | Utilization Rate (reservation-based) |
+|---|---|
+| Berkeley | ~7% |
+| Oakland | ~13.5% |
 
-These values represent **reservation-based utilization only**, and actual usage is likely higher due to walk-ins.
+These are conservative estimates. Walk-in traffic — untracked in the current dataset — significantly raises actual utilization, particularly in Berkeley.
 
----
+### Hourly Heatmap
+Oakland reaches ~52% reservation-based occupancy at 9PM. Berkeley remains below ~22% across all hours, consistent with its walk-in model rather than a true demand gap.
 
-## Key Insights
-
-### 1. Strong Evening Demand Concentration
-
-Customer activity is heavily concentrated in late evening hours, indicating a narrow peak window.
-
-### 2. Location-Based Differences
-
-* Oakland shows stronger structured (reservation) demand
-* Berkeley likely relies more heavily on walk-in customers
-
-### 3. Underutilized Capacity
-
-Both locations exhibit significant unused capacity, especially during early hours.
-
-### 4. Data Limitations Matter
-
-Reservation data alone does not capture the full picture, highlighting the need for improved tracking systems.
+### Reservation Behavior
+- Sessions cluster tightly around **2–3 hours**, aligning with standard pricing
+- Early evening reservations skew toward larger, pre-planned groups
+- Reservation data is biased toward larger parties — smaller walk-in groups are not represented
 
 ---
 
-## Business Recommendations
+## Recommendations
 
-### Short-Term Actions
+| Recommendation | Effort | Impact | Priority |
+|---|---|---|---|
+| Extend peak hour staffing (Fri/Sat 9–11PM) | Low | High | High |
+| Early evening incentives (Happy Hour 6–7PM) | Medium | High | High |
+| Improve daily operations data structure | Medium | Very High | High |
+| Oakland reservation confirmation (24–48hr prior) | Low | Medium | Medium |
+| Drink-driven revenue stream (bundles, happy hour) | Medium | High | High |
+| Restaurant partnership for F&B | Low | Medium | Medium |
+| Ancillary revenue options (optional drink packages) | Medium | Medium | Medium |
 
-* Introduce **early-hour promotions (happy hour pricing, discounts)**
-* Offer **group incentives to shift demand earlier**
-* Test **weekday-specific deals** to increase traffic
+**Note on business strategy:** These recommendations are framed as optional improvements. Jaguar's current model intentionally prioritizes customer experience over revenue maximization — a deliberate strategic choice that likely drives long-term loyalty over short-term profit.
 
-### Medium-Term Improvements
+For full recommendation details see the [analysis notebook](./Jaguar_Analysis.ipynb).
 
-* Implement **better tracking for walk-in customers**
-* Track **room-level usage and turnover time**
-* Improve reservation system consistency
+---
 
-### Long-Term Strategy
+## Data Limitations & Improvement Opportunities
 
-* Explore **dynamic pricing during peak hours**
-* Align pricing strategy with owner’s goal of maintaining a **fun and accessible experience**, not purely revenue maximization
+**Current limitations:**
+- No-shows tracked via cell color only — not exportable or analyzable
+- No customer identifiers, revenue data, or item-level purchases
+- Berkeley and Oakland used different formats requiring significant preprocessing
+
+**Recommended improvements:**
+1. **Session continuity tracking** — assign a session ID (e.g. room + check-in time like "R5-2030") to link extension rows to the original visit
+2. **Item-level F&B tracking** — current daily sheet records F&B as a single total; a simple POS or tablet system would capture product-level data without adding staff burden
+3. **Standardize reservation schema** — separate start time, end time, group size, and contact into distinct fields
+4. **Add explicit no-show column** — replace color-based encoding with a binary flag
+5. **Capture revenue per reservation** — enables pricing analysis and customer value tracking
 
 ---
 
 ## Tech Stack
 
-* Python (Pandas, NumPy)
-* Data Visualization (Matplotlib, Seaborn)
-* Jupyter Notebook
+- **Python** — Pandas, NumPy, Matplotlib, Seaborn
+- **Key technique** — Custom regex parsing pipeline to extract structured data from unstructured reservation text
+- **Jupyter Notebook**
 
 ---
 
-## Project Structure
+## Files
 
 ```
-jaguar-karaoke-business-analytics/
+Jaguar Karaoke Business Analytics Project/
 │
-├── notebooks/
-│   ├── data_cleaning.ipynb
-│   ├── analysis.ipynb
-│
-├── data/
-│   ├── raw/
-│   ├── cleaned/
-│
-├── outputs/
-│   ├── figures/
-│
-├── src/
-│   ├── utils.py
-│
+├── Jaguar_Analysis.ipynb   # Full analysis notebook
+├── Reservation_Jaguar_March_Oakland.csv    # Raw reservation data (Oakland)
+├── Reservation_Jaguar_March_Berkeley.csv   # Raw reservation data (Berkeley)
 └── README.md
 ```
-
----
-
-## Limitations & Future Work
-
-* Incorporate **walk-in customer data** for more accurate utilization estimates
-* Integrate **revenue and item-level sales data** for profitability analysis
-* Develop **predictive models** for demand forecasting
-* Explore **causal impact of promotions or pricing changes**
-
----
-
-## Takeaway
-
-This project demonstrates how even incomplete operational data can be transformed into actionable insights. By combining data cleaning, feature engineering, and business-oriented analysis, it highlights opportunities to improve both **efficiency and customer experience** in a real-world setting.
-
