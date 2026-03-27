@@ -1,70 +1,77 @@
-# Jun Kang Data Portfolio
+# Jun Kang — Data Analytics Portfolio
 
-I am a UC Berkeley Statistics and Economics student graduating May 2026.  
-This portfolio highlights data analytics projects using SQL and Python, focused on transforming messy real-world data into actionable business insights.
+UC Berkeley, Statistics & Economics | Graduating May 2026  
+[LinkedIn](https://www.linkedin.com/in/junkang2002/) | skyjun111@berkeley.edu
+
+This portfolio highlights data analytics projects using Python, SQL, and statistical modeling, focused on turning messy real-world data into decisions that actually matter to the people running the business.
 
 ---
 
 ## Projects
 
-### 1. Karaoke Business Operations & Utilization Analysis (Real-World Project)
-Python (pandas), data cleaning, feature engineering, data visualization  
+### 1. Jaguar Karaoke Business Analytics (Real-World)
+`Python` `Pandas` `Matplotlib` `Seaborn`
 
-Analyzed real operational reservation data from a multi-location karaoke business to evaluate demand patterns, room utilization, and business efficiency.
+Jaguar Karaoke runs two Bay Area locations with no formal data infrastructure — reservations tracked in a spreadsheet, walk-ins unrecorded. I worked directly with the owner to analyze 200+ reservation records and build the first structured view of how the business actually operates.
 
-- Cleaned and structured unstandardized reservation logs using custom parsing functions  
-- Engineered key features including session duration, group size, and time-based utilization  
-- Identified peak demand concentration (8PM–10PM) and underutilized time periods  
-- Revealed limitations of reservation-only data due to high walk-in customer volume  
-- Proposed business improvements balancing revenue optimization with customer experience  
+- Built a custom regex parsing pipeline to extract start time, end time, group size, and contact info from free-text booking entries
+- Engineered hourly utilization models revealing 52% peak room occupancy at Oakland vs 22% at Berkeley, driven by fundamentally different customer profiles at each location
+- Identified that walk-in customers represent the majority of actual traffic, meaning reservation-only data significantly underestimates true demand
+- Translated findings into prioritized operational recommendations aligned with the owner's goal of customer experience over revenue maximization
 
----
-
-### 2. Subscription Growth Analytics  
-SQL + Python  
-
-Analyzed acquisition, CAC, conversion, retention, and churn using a simulated subscription business dataset.
-
-- Built key growth metrics including LTV, churn rate, and cohort retention  
-- Identified inefficiencies in acquisition channels and retention drop-offs  
-- Developed SQL queries and Python workflows for scalable metric analysis  
+[View Project →](https://github.com/seojitongri/jun-kang-data-portfolio/tree/main/Jaguar%20Karaoke%20Business%20Analytics%20Project)
 
 ---
 
-### 3. Econometrics & Causal Inference  
-R / Python  
+### 2. Bay Wheels Demand Analysis: Weather Impact on Ridership
+`Python` `Pandas` `Matplotlib` `Seaborn` `NOAA API` `Makefile` `Binder`
 
-Applied regression and econometric methods to analyze real-world policy and behavioral datasets.
+Bay Wheels operates thousands of bikes across the Bay Area with no built-in visibility into how weather will shift demand on a given day. This project builds a reproducible weather-driven demand model to quantify that relationship and support fleet rebalancing and maintenance scheduling decisions.
 
-- Implemented difference-in-differences and OLS models  
-- Interpreted causal relationships and policy impacts  
-- Focused on statistical rigor and clear economic interpretation  
+- Built an automated ETL pipeline merging 6 years of Bay Wheels trip records (2018–2024) with NOAA weather station data, processing millions of rows
+- Engineered precipitation and weather condition features, applied time-series analysis to quantify demand sensitivity — heavy rain cuts ridership by roughly 1,500 trips, extreme conditions suppress demand by up to 70%
+- Structured as a fully reproducible research project: modular `src/` library, automated `Makefile` pipeline, `environment.yml` for environment replication, and a Binder link so anyone can run the analysis in the cloud
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/final-group15/main)
+
+[View Project →](https://github.com/seojitongri/jun-kang-data-portfolio/tree/main/02-bay-wheels-demand-analysis)
 
 ---
 
-### 4. SQL Practice  
-SQL  
+### 3. Subscription Growth Analytics
+`SQL` `Python`
 
-Collection of query examples covering:
+Built a full growth metrics layer on a simulated subscription business — wrote SQL to construct the core metrics tables (LTV, churn rate, CAC, cohort retention), then Python for analysis and visualization.
 
-- Joins  
-- Aggregations  
-- CTEs  
-- Business-oriented metrics  
+- Identified inefficiencies in acquisition channels and retention drop-offs across cohorts
+- Designed reusable SQL queries for scalable metric tracking
+
+[View Project →](https://github.com/seojitongri/jun-kang-data-portfolio/tree/main/01-subscription-growth-analytics)
+
+---
+
+### 4. Econometric Policy Analysis — Mariel Boatlift
+`Python` `Pandas` `Statsmodels`
+
+Replicated Card (1990) using U.S. CPS survey data to estimate the causal wage and employment effects of the 1980 Mariel Boatlift immigration shock.
+
+- Built difference-in-differences regression models in Python (statsmodels), cleaned and merged large-scale multi-source survey data
+- Applied OLS with dummy variable controls, communicated findings through regression tables and economic interpretation
+
+[View Project →](https://github.com/seojitongri/jun-kang-data-portfolio/tree/main/02-econometrics-mariel-boatlift)
 
 ---
 
 ## Skills
 
-- **Languages:** SQL, Python (pandas)  
-- **Data Analysis:** Data cleaning, feature engineering, EDA, statistical analysis  
-- **Visualization:** Matplotlib, basic Tableau  
-- **Tools:** Excel, Jupyter Notebook, GitHub  
-- **Concepts:** Econometrics, business analytics, data storytelling  
+**Languages:** Python, SQL, R  
+**Libraries:** Pandas, NumPy, Statsmodels, Matplotlib, Seaborn  
+**Tools:** Excel (advanced), Tableau, Power BI, Jupyter, Git, Makefile  
+**Concepts:** Business analytics, EDA, statistical modeling, causal inference, reproducible research
 
 ---
 
 ## Contact
 
 LinkedIn: https://www.linkedin.com/in/junkang2002/  
-Email: skyjun111@berkeley.edu  
+Email: skyjun111@berkeley.edu
