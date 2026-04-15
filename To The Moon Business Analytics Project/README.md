@@ -46,7 +46,7 @@ Revenue channels tracked: Dine-In, To-Go, DoorDash, UberEats.
 
 **Revenue trend:** Overall revenue grew 12% from the baseline period (Dec–Jan average) to March, reaching a four-month high of $63,825.
 
-**Lighting upgrade effect:** February was the first full month after the lighting change. Drink revenue jumped from ~9% to 12% of total revenue — consistent with research showing that warmer, more vibrant ambiance increases bar sales. However, the industry benchmark for drink revenue is 20–25%, indicating significant upside still available.
+**Lighting upgrade effect:** February was the first full month after the lighting change. Drink revenue jumped from ~9% to 12% of total revenue — consistent with research showing that warmer, more vibrant ambiance increases bar sales. However, the industry benchmark for drink revenue is 20–25%, midpoint 22.5%, indicating significant upside still available.
 
 **March interventions:** March saw the strongest revenue month, though three changes happened simultaneously (plates, menu price increase, delivery price increase), making it difficult to isolate which drove the result. This is a classic confounding problem in operational analytics — the kind that daily data will help untangle.
 
