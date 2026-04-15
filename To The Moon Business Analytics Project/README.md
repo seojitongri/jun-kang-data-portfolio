@@ -95,4 +95,4 @@ Built in **Tableau Public** with four views:
 ## About
 
 Analytics project by **Jun Kang** — Statistics & Economics, UC Berkeley (May 2026).  
-[LinkedIn](https://www.linkedin.com/in/jun-kang) | [Tableau Public](https://public.tableau.com/app/profile/jun.kang1322)
+[LinkedIn](https://www.linkedin.com/in/junkang2002/) | [Tableau Public](https://public.tableau.com/app/profile/jun.kang1322)
