@@ -20,7 +20,7 @@ Anomaly detection on 12.6M bike share trips across 1,077 active stations. The sy
 - Documented methodology critique exposing z-score bias on count data with low means, then filtered baseline to validate the Gaussian assumption. Demonstrates statistical rigor beyond surface application.
 - Cross-source validation via NOAA weather table confirmed 4.02-inch atmospheric river caused the multi-station drop, and a zero-rainfall day proved Folsom Street Fair surge was event-driven
 
-[View Project →](Bay-Wheels-SQL-Project/) | [View SQL Queries →](Bay-Wheels-SQL-Project/queries/)
+[View Project →](01-bay-wheels-sql-network-monitoring/) | [View SQL Queries →](01-bay-wheels-sql-network-monitoring/queries/)
 
 ---
 
@@ -34,7 +34,7 @@ Jaguar Karaoke runs two Bay Area locations with no formal data infrastructure. R
 - Identified that walk-in customers represent the majority of actual traffic, meaning reservation-only data significantly underestimates true demand
 - Translated findings into prioritized operational recommendations aligned with the owner's goal of customer experience over revenue maximization
 
-[View Project →](Jaguar%20Karaoke%20Business%20Analytics%20Project/)
+[View Project →](02-jaguar-karaoke-analytics/)
 
 ---
 
@@ -48,7 +48,7 @@ To The Moon is a Korean restaurant in Oakland's Temescal neighborhood. The owner
 - Built and published a Tableau Public dashboard with KPI cards, revenue trend line with intervention markers, channel mix breakdown, and drink revenue benchmarking against industry standard
 - Engagement is ongoing. Next phase includes daily POS data for granular regression modeling and ROI measurement of Instagram ads and influencer campaigns
 
-[View Dashboard →](https://public.tableau.com/app/profile/jun.kang1322) | [View Project →](To%20The%20Moon%20Business%20Analytics%20Project/)
+[View Dashboard →](https://public.tableau.com/app/profile/jun.kang1322) | [View Project →](03-to-the-moon-analytics/)
 
 ---
 
@@ -63,7 +63,7 @@ Reproducible weather-driven demand modeling on 6 years of Bay Wheels trip data. 
 - Engineered precipitation features and applied time-series analysis to quantify demand sensitivity. Heavy rain cuts ridership by approximately 1,500 trips. Extreme conditions suppress demand by up to 70%.
 - Structured as a fully reproducible research project: modular `src/` library, automated Makefile pipeline, `environment.yml` for environment replication, and a Binder link so anyone can run the analysis in the cloud
 
-[View Project →](02-bay-wheels-demand-analysis/)
+[View Project →](04-bay-wheels-demand-analysis/)
 
 ---
 
@@ -75,7 +75,7 @@ Growth metrics layer on a simulated subscription business. Built a full SQL pipe
 - Identified inefficiencies in acquisition channels and retention drop-offs across cohorts
 - Designed reusable SQL queries for scalable metric tracking
 
-[View Project →](01-subscription-growth-analytics/)
+[View Project →](05-subscription-growth-analytics/)
 
 ---
 
@@ -87,7 +87,7 @@ Replication of Card (1990) using U.S. CPS survey data to estimate the causal wag
 - Built difference-in-differences regression models in Python and Stata, cleaned and merged large-scale multi-source survey data
 - Applied OLS with dummy variable controls, communicated findings through regression tables and economic interpretation
 
-[View Project →](02-econometrics-mariel-boatlift/)
+[View Project →](06-mariel-boatlift-econometrics/)
 
 ---
 

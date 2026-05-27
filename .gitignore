@@ -4,3 +4,9 @@ Bay-Wheels-SQL-Project/data/*.csv
 .DS_Store
 .ipynb_checkpoints/
 .DS_Store
+
+# SQL project data files (too large for git, regeneratable)
+*.db
+*.db-journal
+*.zip
+**/raw/
