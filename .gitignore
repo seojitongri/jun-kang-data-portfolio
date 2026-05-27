@@ -3,3 +3,4 @@ Bay-Wheels-SQL-Project/data/baywheels.db
 Bay-Wheels-SQL-Project/data/*.csv
 .DS_Store
 .ipynb_checkpoints/
+.DS_Store
